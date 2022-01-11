@@ -34,7 +34,7 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                <Label Text="CPSC 5250 WQ22"></Label>
+                <Label Text="CPSC 4250 WQ22"></Label>
                 <Label Text="Jesse McQuillan"></Label>
                 <Label Text="1/11/2022"></Label>
             </StackLayout>
