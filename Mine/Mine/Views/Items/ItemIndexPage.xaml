@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Mine.Views.ItemIndexPage"
              Title="{Binding Title}"
-             x:Name="BrowseItemsPage">
+             x:Name="Index">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" IconImageSource="icon_add.png"/>
