@@ -58,8 +58,8 @@
                 <Label Text="CPSC 4250 WQ22"></Label>
                 
                 <Label Text="Jesse McQuillan"></Label>
-                
-                <Label Text="1/24/2022 - 1740"></Label>
+
+                <Label x:Name="CurrentDateTimeLabel"  ></Label>
                 
             </StackLayout>
             

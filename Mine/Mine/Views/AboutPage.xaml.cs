@@ -10,9 +10,16 @@ namespace Mine.Views
     [DesignTimeVisible(false)]
     public partial class AboutPage : ContentPage
     {
+
+        /// <summary>
+        /// Constructor for AboutPage
+        /// </summary>
         public AboutPage()
         {
             InitializeComponent();
+
+            CurrentDateTimeLabel.Text = System.DateTime.Now.ToString("MM/dd/yy HH:mm:ss");
+
         }
     }
 }
