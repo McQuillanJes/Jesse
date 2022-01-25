@@ -62,6 +62,7 @@ namespace Mine.ViewModels
         /// <returns> Returns a record from ReadAsync </returns>
         public async Task<ItemModel> ReadAsync(string id)
         {
+            //check to see if item exists. Return the item if it does.
             var result = await DataStore.ReadAsync(id);
 
             return result;
