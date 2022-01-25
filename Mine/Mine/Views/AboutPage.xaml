@@ -21,27 +21,50 @@
     </ContentPage.Resources>
 
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+        
+        <StackLayout BackgroundColor="{StaticResource Accent}" 
+                     VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="Fill">
+            
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center">
+                
+                <ContentView Padding="0,40,0,40" 
+                             VerticalOptions="FillAndExpand">
+                    
                     <Image 
                         Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/914px-Seattle_Redhawks_logo.svg.png" 
                         WidthRequest="100" 
                         HeightRequest="100"/>   
+                    
                 </ContentView>
+                
             </StackLayout>
+            
         </StackLayout>
+        
         <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+            
+            <StackLayout Orientation="Vertical" 
+                         Padding="16,40,16,40" 
+                         Spacing="10">
+                
                 <Label Text="CPSC 4250 WQ22"></Label>
+                
                 <Label Text="Jesse McQuillan"></Label>
-                <Label Text="1/16/2022 - 1830"></Label>
+                
+                <Label Text="1/24/2022 - 1740"></Label>
+                
             </StackLayout>
+            
         </ScrollView>
+        
     </Grid>
     
 </ContentPage>
