@@ -58,8 +58,8 @@ namespace Mine.ViewModels
         /// <summary>
         /// Read an item from the datastore
         /// </summary>
-        /// <param name="id">The ID of the record</param>
-        /// <returns>Returns a record from ReadAsync</returns>
+        /// <param name="id"> The ID of the record </param>
+        /// <returns> Returns a record from ReadAsync </returns>
         public async Task<ItemModel> ReadAsync(string id)
         {
             var result = await DataStore.ReadAsync(id);
@@ -67,5 +67,29 @@ namespace Mine.ViewModels
             return result;
         }
 
+        /// <summary>
+        /// Deletes a record from both local memory and the datastore
+        /// </summary>
+        /// <param name="data"> The record to delete </param>
+        /// <returns> True if deleted </returns>
+        public async Task<bool> DeleteAsync(ItemModel data)
+        {
+            //check to see if record exists, if not return null
+            var record = await ReadAsync(data.Id);
+            if (record == null)
+            {
+                return false;
+            }
+                
+
+            //Remove the data locally
+            DataSet.Remove(data);
+
+            //remove the data from the data store
+            var result = await DataStore.DeleteAsync(data.Id);
+
+            return result;
+        }
+        
     }
 }
