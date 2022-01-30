@@ -6,7 +6,7 @@ namespace Mine
 {
     public static class Constants
     {
-        public const string DatabaseFilename = "game.db3";
+        public const string DatabaseFilename = "mine.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
             //Open the databse in read-write mode
