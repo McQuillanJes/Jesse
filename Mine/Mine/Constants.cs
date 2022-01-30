@@ -2,7 +2,7 @@
 using System.IO;
 
 
-namespace Game
+namespace Mine
 {
     public static class Constants
     {
