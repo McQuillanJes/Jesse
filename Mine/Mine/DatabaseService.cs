@@ -10,12 +10,12 @@ namespace Mine.Services
     public class DatabaseService : IDataStore<ItemModel>
     {
 
-        static readonly Lazy<SQLiteAsyncConnection> lasyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+        static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
         {
             return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         });
 
-        static SQLiteAsyncConnection Database => lasyInitializer.Value;
+        static SQLiteAsyncConnection Database => lazyInitializer.Value;
         static bool initialized = false;
 
         public DatabaseService()
@@ -50,6 +50,7 @@ namespace Mine.Services
         {
             throw new NotImplementedException();
         }
+
 
         public Task<ItemModel> ReadAsync(string id)
         {
