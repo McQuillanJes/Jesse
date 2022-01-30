@@ -59,9 +59,27 @@ namespace Mine.Services
             return true;
         }
 
-        public Task<bool> UpdateAsync(ItemModel item)
+        /// <summary>
+        /// Send an item to the db for an update
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns> true if the item successfully updated</returns>
+        public async Task<bool> UpdateAsync(ItemModel item)
         {
-            throw new NotImplementedException();
+            //check argument for null
+            if(item == null)
+            {
+                return false;
+            }
+
+            //Pass the item to the db and check for error
+            var result = await Database.UpdateAsync(item);
+            if(result == 0)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public Task<bool> DeleteAsync(string id)
@@ -92,7 +110,7 @@ namespace Mine.Services
         /// </summary>
         /// <param name="forceRefresh"></param>
         /// <returns></returns>
-        async public Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
         {
             //I think this asks the db to return the itemModel table
             var result = await Database.Table<ItemModel>().ToListAsync();
